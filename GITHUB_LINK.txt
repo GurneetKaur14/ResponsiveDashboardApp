@@ -1,0 +1,5 @@
+Repository URL: https://github.com/GurneetKaur14/ResponsiveDashboardApp.git
+Student Name: Gurneet Kaur
+Student ID: [Your Student ID]
+Lab: CPAN 213 - Lab 6
+Date: October 14, 2025

@@ -1,97 +1,85 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Responsive Dashboard App - Lab 4
+## Student Information
+- **Name:** Gurneet Kaur
+- **Student ID:** N01724218
+- **Course:** CPAN 213
+- **Lab:** Lab 4 - Responsive Layouts with Flexbox
+- **Date:** October 6, 2025
 
-# Getting Started
+## Project Description
+This responsive dashboard application demonstrates advanced Flexbox layout techniques,
+responsive design patterns, and platform-specific styling in React Native.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## Features Implemented
+- Responsive grid system with breakpoint detection
+- Dashboard widgets with statistics and trends
+- Orientation-aware layouts
+- Platform-specific styling (iOS/Android)
+- Pull-to-refresh functionality
+- Performance-optimized StyleSheets
 
-## Step 1: Start Metro
+## Technologies Used
+- React Native 0.72+
+- React Native Orientation Locker
+- React Native Vector Icons
+- Platform-specific APIs
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## Installation
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Install iOS pods (macOS only): `cd ios && pod install`
+4. Run on Android: `npx react-native run-android`
+5. Run on iOS: `npx react-native run-ios`
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## Project Structure
+src/
+├── components/
+│ ├── DashboardHeader.js
+│ ├── ResponsiveGrid.js
+│ └── widgets/
+│        ├── BaseWidget.js
+│        └── StatisticWidget.js
+├── screens/
+│ └── DashboardScreen.js
+├── styles/
+│ └── theme.js
+└── utils/
+  └── responsive.js
 
-```sh
-# Using npm
-npm start
+## Responsive Breakpoints
+- Small phones: < 350px
+- Medium phones: 350-400px
+- Large phones: 400-500px
+- Tablets: 500-768px
+- Large tablets: > 768px
 
-# OR using Yarn
-yarn start
-```
+## Grid Columns by Device
+- Small: 1 column
+- Medium: 2 columns
+- Tablet Portrait: 2 columns
+- Tablet Landscape: 2-3 columns
 
-## Step 2: Build and run your app
+## Performance Notes
+- All animations run at 60fps
+- StyleSheet.create used for all styles
+- Memoization applied where necessary
+- Native driver enabled for animations
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
 
-### Android
+## Screenshots
+See `/screenshots` folder for app images on different devices.
+The following images show how the layout adapts across different devices and orientations.
 
-```sh
-# Using npm
-npm run android
+- **Pixel 4 (Portrait):** 1 column layout  
+- **Pixel 4 (Landscape):** 1 column layout  
+- **Android Tablet (Portrait):** 2 column layout  
+- **Android Tablet (Landscape):** 2 column layout
 
-# OR using Yarn
-yarn android
-```
+## Known Issues
+1. Limited testing devices: The app was only tested on the Pixel 4 and an Android tablet emulator. It was not tested on iOS devices due to hardware limitations
+2. Responsive Grid Limitation: The grid layout adjusts based on width but doesn’t yet dynamically rearrange widgets smoothly during rotation — items simply re-render.
 
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+## Future Enhancements
+- I want to improve my skills in writing cleaner reusable components and learning more about advanced React Native animations.
+- Add smoother transitions and advanced React Native animations
+- Test on both iOS and Android to ensure full platform consistency

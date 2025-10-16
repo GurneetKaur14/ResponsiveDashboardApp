@@ -31,10 +31,10 @@ const isTab = isTablet();
 return (
 <>
     <StatusBar
-        backgroundColor={theme.colors.primary.main}
-        barStyle="light-content"
-        translucent={Platform.OS === 'android'}
-    />
+  backgroundColor={theme.colors.primary.main}
+  barStyle="light-content"
+/>
+
 
     <View style={[styles.container, isTab && styles.tabletContainer]}>
 
@@ -118,7 +118,7 @@ return (
     container: {
         backgroundColor: theme.colors.primary.main,
         paddingHorizontal: getAdaptivePadding(),
-        paddingTop: Platform.OS === 'ios' ? hp('6%') : hp('4%'),
+        paddingTop: Platform.OS === 'ios' ? hp('6%') : hp('5%'),
         paddingBottom: theme.spacing.md,
         flexDirection: 'row',
         alignItems: 'center',
