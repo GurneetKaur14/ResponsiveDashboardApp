@@ -46,21 +46,21 @@ Font sizes are made flexible using a responsive function that scales based on th
 A helper function like rf() adjusts text size proportionally to screen width. For example, on a tablet, headings automatically appear larger than on a phone.
 
 **Typography Scale:**
-- h1: [24]pt
-- h2: [20]pt
-- h3: [18]pt
+- h1: [28]pt
+- h2: [24]pt
+- h3: [20]pt
 - body: [16]pt
-- caption: [12]
+- caption: [14]
 
 ### Spacing System
 The spacing system is consistent throughout the app to create equal padding and margin.
 
 **Spacing Values:**
-- xs: [4]
-- sm: [8]
-- md: [16]
-- lg: [24]
-- xl: [32]
+- xs: 1% of screen width (~4dp)
+- sm: 2% of screen width (~8dp)
+- md: 4% of screen width (~16dp)
+- lg: 6% of screen width (~24dp)
+- xl: 8% of screen width (~32dp)
 --
 ## Platform-Specific Implementations
 ### iOS Specific Styling
@@ -70,7 +70,6 @@ The spacing system is consistent throughout the app to create equal padding and 
 - Used light background colors for a clean, native iOS feel
 
 ### Android Specific Styling
-[List Android-specific styles used]
 - Elevation for shadows
 - Material Design color scheme
 - Status bar translucent handling
@@ -81,15 +80,19 @@ The spacing system is consistent throughout the app to create equal padding and 
 The BaseWidget pattern helps reuse card layouts across different sections (like Statistics and Quick Actions). Each widget accepts children components and applies a consistent style.
 
 ### Component Hierarchy
-DashboardScreen
-├── DashboardHeader
-│ ├── Menu Button
-│ ├── Title/Subtitle
-│ └── Notification/Profile Buttons
-├── ResponsiveGrid
-│ └── StatisticWidgets (4x)
-└── BaseWidget
-  └── Quick Actions (4x)
+src/
+├── components/
+│ ├── DashboardHeader.js
+│ ├── ResponsiveGrid.js
+│ └── widgets/
+│        ├── BaseWidget.js
+│        └── StatisticWidget.js
+├── screens/
+│ └── DashboardScreen.js
+├── styles/
+│ └── theme.js
+└── utils/
+  └── responsive.js
 ---
 ## Performance Optimizations Applied
 ### StyleSheet Optimization
